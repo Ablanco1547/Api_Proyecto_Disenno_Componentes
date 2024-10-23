@@ -1,4 +1,5 @@
 import express, { json } from "express";
+import { corsMiddleware } from "./middlewares/cors";
 
 const app = express();
 app.use(json());
