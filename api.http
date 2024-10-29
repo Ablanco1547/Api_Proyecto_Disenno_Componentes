@@ -9,9 +9,9 @@ POST http://localhost:1234/citas
 Content-Type: application/json
 
 {
-  "fecha": "2021-10-10",
-  "hora": "09:52:31",
-  "paciente": "Juan Perezzz",
-  "medico": "Dr. Juanaaa",
-  "consultorio": "Aa"
+  "fecha": "2024-10-10",
+  "hora": "11:52:31",
+  "paciente": "Mauro el guapo",
+  "medico": "Dr. Nathy greenthumb",
+  "consultorio": "420"
 }

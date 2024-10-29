@@ -14,7 +14,6 @@ export class CitaModel {
 
 		citas.push(newCita);
 
-		// Write the updated citas array back to the citas.json file
 		await writeFile("./citas.json", JSON.stringify(citas, null, 2));
 
 		return newCita;
