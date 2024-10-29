@@ -1,0 +1,17 @@
+### recuperar todas las citas
+
+GET http://localhost:1234/citas
+
+
+### crear una cita
+
+POST http://localhost:1234/citas
+Content-Type: application/json
+
+{
+  "fecha": "2021-10-10",
+  "hora": "09:52:31",
+  "paciente": "Juan Perezzz",
+  "medico": "Dr. Juanaaa",
+  "consultorio": "Aa"
+}

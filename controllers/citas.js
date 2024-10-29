@@ -1,25 +1,33 @@
 //Aqui va la logica de los controladores, del getall, getbyiD y todo eso tambien la devolucion de los codigos 400/200/500 etc
 
+//AQUI HAY QUE IMPORTAR EL MODELO DE CITAS QUE VAMOS A USAR
+
+import { CitaModel } from "../models/local/cita.js";
+
+//AQUI HAY QUE IMPORTAR LA FUNCION DE VALIDACION DE CITAS
+import { validateCita } from "../schemas/citas.js";
+
 export class CitaController {
-	static async getCitas(req, res) {
-		try {
-			const citas = await Cita.find();
-			res.json(citas);
-		} catch (error) {
-			res.status(500).json({ message: error.message });
-		}
+	//Ejemplo del get, acepta parametros de query (mascota)
+	static async getAll(req, res) {
+		const { mascota } = req.query;
+		const citas = await CitaModel.getAll({ mascota });
+		res.json(citas);
 	}
-	//EJEMPLO DEL GET BY ID
-	static async getCitaById(req, res) {
-		const { id } = req.params;
-		try {
-			const cita = await Cita.findById(id);
-			if (!cita) {
-				return res.status(404).json({ message: "Cita not found" });
-			}
-			res.json(cita);
-		} catch (error) {
-			res.status(500).json({ message: error.message });
+
+	//EJEMPLO DEL POST
+	static async create(req, res) {
+		//se validan los datos de la cita utilizando la funcion validateCita del schema
+		const result = validateCita(req.body);
+		if (!result.success) {
+			//422 Unprocessable Entity
+			return res.status(400).json({ error: JSON.parse(result.error.message) });
 		}
+
+		//Del modelo citas se crea una nueva cita con los datos del body
+
+		const newCita = await CitaModel.create({ input: result.data });
+
+		res.status(201).json(newCita);
 	}
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "aebc1de5-0a52-44d2-88c7-ddb6276ceeed",
+    "fecha": "2021-10-10",
+    "hora": "09:52:31",
+    "paciente": "Juan Perez",
+    "medico": "Dr. Juan",
+    "consultorio": "A"
+  },
+  {
+    "id": "f3fdafc0-5303-43f0-b4cb-d468ea7d4323",
+    "fecha": "2021-10-10",
+    "hora": "09:52:31",
+    "paciente": "Juan Perezzz",
+    "medico": "Dr. Juanaaa",
+    "consultorio": "Aa"
+  }
+]

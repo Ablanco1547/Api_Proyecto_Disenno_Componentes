@@ -2,9 +2,12 @@
   "name": "api_citas_proyecto",
   "version": "1.0.0",
   "description": "Api para el app de reserva de citas",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:1": "node --watch app.js",
+    "dev:2": "node app.js"
   },
   "author": "",
   "license": "ISC",
