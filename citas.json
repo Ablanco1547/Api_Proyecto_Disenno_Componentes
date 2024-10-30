@@ -14,5 +14,13 @@
     "paciente": "Juan Perezzz",
     "medico": "Dr. Juanaaa",
     "consultorio": "Aa"
+  },
+  {
+    "id": "cab79104-ef5d-4e2a-ad17-113c02efb8a9",
+    "fecha": "2024-10-10",
+    "hora": "11:52:31",
+    "paciente": "Mauro el del mall",
+    "medico": "Dr. Nathy sin pulso",
+    "consultorio": "1"
   }
 ]

@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "fecha": "2024-10-10",
   "hora": "11:52:31",
-  "paciente": "Mauro el guapo",
-  "medico": "Dr. Nathy greenthumb",
-  "consultorio": "420"
+  "paciente": "Mauro el del mall",
+  "medico": "Dr. Nathy sin pulso",
+  "consultorio": "1"
 }

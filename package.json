@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:1": "node --watch app.js",
-    "dev:2": "node app.js"
+    "dev:2": "node app.js",
+    "debug": "node --inspect app.js"
   },
   "author": "",
   "license": "ISC",
