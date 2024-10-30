@@ -1,0 +1,36 @@
+steps:
+  # 1. Build the Node.js application
+  - name: "gcr.io/cloudbuild/docker"
+    args:
+      - "build"
+      - "-t"
+      - "gcr.io/composed-amulet-435916-b8/node-app:latest"
+      - "."
+  # 2. Push the image to Google Container Registry
+  - name: "gcr.io/cloudbuild/docker"
+    args:
+      - "push"
+      - "gcr.io/composed-amulet-435916-b8/node-app:latest"
+  # 3. Deploy to Cloud Run
+  - name: "gcr.io/cloudbuild/cloudrun"
+    args:
+      - "deploy"
+      - "node-app"
+      - "--image"
+      - "gcr.io/composed-amulet-435916-b8/node-app:latest"
+      - "--platform"
+      - "managed"
+      - "--region"
+      - "us (multiple regions in United States)" # Choose your desired region
+      - "--allow-unauthenticated" # Optional: Allow unauthenticated access
+      - "--memory"
+      - "256Mi" # Adjust memory as needed
+      - "--concurrency"
+      - "80" # Adjust concurrency as needed
+      - "--timeout"
+      - "120s" # Adjust timeout as needed
+images:
+  - "gcr.io/composed-amulet-435916-b8/node-app:latest"
+options:
+  # Optional: Use Cloud Logging for build logs
+  logging: "CLOUD_LOGGING_ONLY"
