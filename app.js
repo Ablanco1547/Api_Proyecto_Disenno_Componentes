@@ -1,14 +1,18 @@
 import express, { json } from "express";
 import { citasRouter } from "./routes/citas.js";
+import { personasRouter } from './routes/persona.js';
+
 
 import { corsMiddleware } from "./middlewares/cors.js";
 
 const app = express();
 app.use(json());
-app.disable("x-powered-by");
+//app.disable("x-powered-by");
 
 //Aqui ponemos los routers que vayamos a usar
 app.use("/citas", citasRouter);
+
+app.use('/persona', personasRouter);
 
 const PORT = process.env.PORT ?? 1234;
 
