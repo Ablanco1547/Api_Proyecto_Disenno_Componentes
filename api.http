@@ -26,7 +26,6 @@ POST http://localhost:1234/persona
 Content-Type: application/json
 
 {
-  "id": "651",
   "nombre": "Adrian",
   "apellido": "Blanco",
   "fecha_nacimiento": "1993-09-18",

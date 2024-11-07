@@ -1,4 +1,5 @@
 import { BigQuery } from "@google-cloud/bigquery";
+import { randomUUID } from "node:crypto";
 
 const bigquery = new BigQuery();
 const datasetId = "veterinaria";
@@ -12,6 +13,7 @@ export class PersonaModel {
 	}
 
 	static async create({ input }) {
+		input.id = randomUUID();
 		const rows = [input];
 		try {
 			await bigquery.dataset(datasetId).table(tableId).insert(rows);
