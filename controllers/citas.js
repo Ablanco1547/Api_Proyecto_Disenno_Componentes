@@ -2,7 +2,7 @@
 
 //AQUI HAY QUE IMPORTAR EL MODELO DE CITAS QUE VAMOS A USAR
 
-import { CitaModel } from "../models/local/cita.js";
+import { CitaModel } from "../models/cita.js";
 
 //AQUI HAY QUE IMPORTAR LA FUNCION DE VALIDACION DE CITAS
 import { validateCita } from "../schemas/citas.js";

@@ -4,9 +4,10 @@ import z from "zod";
 export const citaSchema = z.object({
 	fecha: z.string().date(),
 	hora: z.string().time(),
-	paciente: z.string(),
-	medico: z.string(),
-	consultorio: z.string(),
+	paciente_id: z.string(),
+	medico_id: z.string(),
+	consultorio_id: z.string(),
+	descripcion: z.string(),
 });
 
 //esta funcion valida que los datos de la cita sean correctos

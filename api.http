@@ -11,10 +11,12 @@ Content-Type: application/json
 {
   "fecha": "2024-10-10",
   "hora": "11:52:31",
-  "paciente": "Mauro el guapo",
-  "medico": "Nathy su patrona",
-  "consultorio": "420"
+  "paciente_id": "Adrian Blanco",
+  "medico_id": "Nathalie",
+  "consultorio_id": "420",
+  "descripcion": "consulta de rutina"
 }
+
 
 ### Obtener todas las personas
 GET http://localhost:1234/persona
@@ -24,10 +26,10 @@ POST http://localhost:1234/persona
 Content-Type: application/json
 
 {
-  "id": "123",
-  "nombre": "Nath",
-  "apellido": "Test",
-  "fecha_nacimiento": "1993-07-16",
-  "telefono": "123456",
-  "email": "nath@test.com"
+  "id": "651",
+  "nombre": "Adrian",
+  "apellido": "Blanco",
+  "fecha_nacimiento": "1993-09-18",
+  "telefono": "83182887",
+  "email": "adri@test.com"
 }
