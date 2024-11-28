@@ -15,7 +15,7 @@ app.use("/citas", citasRouter);
 
 app.use("/persona", personasRouter);
 
-const PORT = process.env.PORT ?? 1234;
+const PORT = process.env.PORT ?? 80;
 
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);

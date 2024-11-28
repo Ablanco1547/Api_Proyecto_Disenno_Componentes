@@ -19,7 +19,7 @@ Content-Type: application/json
 
 
 ### Obtener todas las personas
-GET http://3.141.197.103/:1234/persona
+GET https://ec2-3-141-197-103.us-east-2.compute.amazonaws.com//persona
 
 ### Crear una nueva persona
 POST http://3.141.197.103/:1234/persona
