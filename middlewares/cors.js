@@ -7,6 +7,7 @@ const ACCEPTED_ORIGINS = [
 	"http://localhost:1234",
 	"http://localhost:8080",
 	"http://localhost:4200",
+	"https://api-proyecto-disenno-componentes-qq5k8ggrt.vercel.app",
 ];
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
