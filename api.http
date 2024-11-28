@@ -1,6 +1,6 @@
 ### recuperar todas las citas
 
-GET http://localhost:1234/citas
+GET https://api-proyecto-disenno-componentes-qq5k8ggrt.vercel.app/citas
 
 
 ### crear una cita
@@ -19,10 +19,10 @@ Content-Type: application/json
 
 
 ### Obtener todas las personas
-GET http://localhost:1234/persona
+GET http://3.141.197.103/:1234/persona
 
 ### Crear una nueva persona
-POST http://localhost:1234/persona
+POST http://3.141.197.103/:1234/persona
 Content-Type: application/json
 
 {
